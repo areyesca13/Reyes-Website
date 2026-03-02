@@ -16,22 +16,50 @@ body, .App{
 
 .navbar{
   position: fixed;
-  margin:0;
+  
+  height:70px;
   width: 100%;
-  padding: 2%;
+  padding: 0 5%;
   display:flex;
   justify-content: space-between;
-  background: none;
+  align-items: center;
+  
+  z-index:1000;
   box-sizing: border-box;
-  overflow: hidden;
+  
 
 }
 .nav-links a{
+  position: relative;
   margin-left: 20px;
   font-size:25px;
+  display:inline-block;
   color: black;
   text-decoration: none;
+  cursor:pointer;
+  transition: color 0.3s ease;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #1e2f59;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover {
+  color: #1e2f59;
+}
 
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.hamburger{
+  display:none;
+  cursor: pointer;
 }
 .section{
   min-height:80vh;
@@ -43,8 +71,9 @@ body, .App{
   margin:0;
 }
 .home{
-  height: 50vh;
+  padding-bottom:50px;
   background-color: #E7E9EE;
+  margin-bottom:20px;
 }
 .home-content {
   display: flex;
@@ -61,8 +90,9 @@ body, .App{
 }
 
 .home-image {
-  width: 700px;       /* adjust as needed */
-  height: 700px;      /* keeps it square */
+  
+  width: 100%;       /* adjust as needed */
+  max-width:700px;     /* keeps it square */
   border-radius: 50%; /* makes it circular */
   object-fit: cover;  /* keeps aspect ratio and crops if needed */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* optional styling */
@@ -70,12 +100,13 @@ body, .App{
 
 .about{
   background-color: #1e2f59;
-  height: 70vh;
+  height: 40vh;
   margin: 0;
   padding:0;
   
 }
 .about.section {
+  scroll-margin-top: 20px;
   height: auto;              /* content decides height */
   padding: 60px 30px;        /* less top padding */
   justify-content: flex-start; /* align content at top */
@@ -103,24 +134,24 @@ body, .App{
 }
 
 .about-text h1{
-  margin-top: 150px;
+  margin-top: 25px;
   color: #fff;
   margin-bottom: 30px;
 }
 .about-text h2 {
   margin-bottom: 10px;
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 
 
 .about-programming {
-  margin-top: 200px; /* adds significant space below personal section */
+  margin-top: 100px; /* adds significant space below personal section */
 }
 .about-slideshow {
   position: relative;
-  margin-top:200px;
+  margin-top:25px;
   margin-left:200px;
   margin-right:60px;
   width: 100%;
@@ -240,6 +271,7 @@ body, .App{
 
 
 @media (max-width: 400px) {
+  
   .home-image {
     width: 120px;
     height: 120px;
@@ -274,7 +306,42 @@ body, .App{
   }
 
 }
+@media (max-width: 768px) {
+  .navbar{
+    background-color:#E7E9EE;
+  }
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #E7E9EE;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    overflow:hidden;
+    display: none;
+    max-height: 0;
+    opacity:0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+
+  .nav-links.active {
+    display:flex;
+    max-height: 300px;
+    opacity:1;
+    
+  }
+
+  .hamburger {
+    display: block;
+    
+  }
+}
 @media (max-width: 900px) {
+  
+
   .about-container {
     flex-direction: column;
     align-items: center;
