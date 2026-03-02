@@ -1,0 +1,292 @@
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* height of SVG or desired offset */
+  overflow-x: hidden;
+}
+body, .App{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: #E7E9EE;
+  overflow-x: hidden;
+  
+}
+*{
+  box-sizing: border-box;
+}
+
+.navbar{
+  position: fixed;
+  margin:0;
+  width: 100%;
+  padding: 2%;
+  display:flex;
+  justify-content: space-between;
+  background: none;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+.nav-links a{
+  margin-left: 20px;
+  font-size:25px;
+  color: black;
+  text-decoration: none;
+
+}
+.section{
+  min-height:80vh;
+  padding-top: 80px;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  margin:0;
+}
+.home{
+  height: 50vh;
+  background-color: #E7E9EE;
+}
+.home-content {
+  display: flex;
+  flex-direction: column; /* stack image above text */
+  align-items: center;
+  text-align: center;
+  gap: 20px; /* space between image and text */
+}
+.home-content h1,
+.home-content h2{
+  margin:0;
+  margin-top:10px;
+
+}
+
+.home-image {
+  width: 700px;       /* adjust as needed */
+  height: 700px;      /* keeps it square */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover;  /* keeps aspect ratio and crops if needed */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* optional styling */
+}
+
+.about{
+  background-color: #1e2f59;
+  height: 70vh;
+  margin: 0;
+  padding:0;
+  
+}
+.about.section {
+  height: auto;              /* content decides height */
+  padding: 60px 30px;        /* less top padding */
+  justify-content: flex-start; /* align content at top */
+  align-items: stretch;      /* normal flow */
+}
+
+
+.about-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap; /* prevents squishing */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.about-text,
+.about-slideshow {
+  flex: 1;
+  min-width: 320px; 
+  width:50%;/* stops text from becoming too skinny */
+}
+
+.about-text h1{
+  margin-top: 150px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.about-text h2 {
+  margin-bottom: 10px;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+
+
+.about-programming {
+  margin-top: 200px; /* adds significant space below personal section */
+}
+.about-slideshow {
+  position: relative;
+  margin-top:200px;
+  margin-left:200px;
+  margin-right:60px;
+  width: 100%;
+  max-width: 650px;
+}
+
+
+.slideshow-image {
+  width: 100%;
+  max-width: 700px; /* control slideshow size here */
+  height: 600px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: opacity 0.4s ease;
+}
+
+/* Dots */
+.slideshow-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+.divider{
+  width:100%;
+  background-color: #E7E9EE;
+  display:block;
+  padding: 0;
+  height: auto;
+  margin-bottom: -1px;
+}
+.divider2{
+  width:100%;
+  background-color: #1e2f59;
+  display:block;
+  padding: 0;
+  height: auto;
+  margin-bottom: -1px;
+}
+.projects{
+  width:100%;
+  padding: 80px 5%;
+  background-color: #E7E9EE;
+  min-height:60vh;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+.projects h1 
+{
+  text-align: center;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+
+.project-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  margin: 6px 0;
+}
+
+.project-card a {
+  color: #1e2f59;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+.contact{
+  width:100%;
+  padding-top: 20px;
+  background-color: #E7E9EE;
+  height:20vh;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media (max-width: 400px) {
+  .home-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content h2{
+    font-size: 2rem;
+  }
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-container {
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center everything */
+    text-align: center;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .about-slideshow {
+    width: 100%;
+    max-width: 400px;   /* keeps it clean, not too wide */
+    margin-top: 40px;   /* space between text and slideshow */
+  }
+
+}
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-slideshow {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
