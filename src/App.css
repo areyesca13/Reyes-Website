@@ -1,6 +1,6 @@
 html{
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* height of SVG or desired offset */
+  scroll-padding-top: 10%; /* height of SVG or desired offset */
   overflow-x: hidden;
 }
 body, .App{
@@ -25,7 +25,7 @@ body, .App{
   align-items: center;
   
   z-index:1000;
-  box-sizing: border-box;
+  
   
 
 }
@@ -33,11 +33,12 @@ body, .App{
   position: relative;
   margin-left: 20px;
   font-size:25px;
+  font-weight: bold;
   display:inline-block;
   color: black;
   text-decoration: none;
   cursor:pointer;
-  transition: color 0.3s ease;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 .nav-links a::after {
   content: "";
@@ -46,20 +47,33 @@ body, .App{
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #1e2f59;
+  background-color: #F39C12;
   transition: width 0.3s ease;
 }
 .nav-links a:hover {
-  color: #1e2f59;
+  color: #F39C12;
 }
 
 .nav-links a:hover::after {
   width: 100%;
 }
 
-.hamburger{
-  display:none;
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
   cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 .section{
   min-height:80vh;
@@ -91,8 +105,8 @@ body, .App{
 
 .home-image {
   
-  width: 100%;       /* adjust as needed */
-  max-width:700px;     /* keeps it square */
+  width: 90%;       /* adjust as needed */
+  max-width:550px;     /* keeps it square */
   border-radius: 50%; /* makes it circular */
   object-fit: cover;  /* keeps aspect ratio and crops if needed */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* optional styling */
@@ -208,6 +222,7 @@ body, .App{
 .projects{
   width:100%;
   padding: 80px 5%;
+  padding-bottom:150px;
   background-color: #E7E9EE;
   min-height:60vh;
   justify-content: center;
@@ -221,9 +236,9 @@ body, .App{
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 40px;
+  gap: 50px;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 
@@ -259,16 +274,84 @@ body, .App{
   text-decoration: underline;
 }
 
-.contact{
-  width:100%;
-  padding-top: 20px;
+.contact {
   background-color: #E7E9EE;
-  height:20vh;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  padding: 80px 5%;
+  height:90vh;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;     /* space between columns */
+  max-width: 1200px;
+  margin:0 auto;
+  flex-wrap: wrap;
+  
+}
+.contact-form,
+.contact-social {
+  flex: 1;        /* equal width */
+  min-width: 300px;
+  text-align: center;
+  
+   /* prevents columns from getting too narrow */
+}
+.contact-form h2, .contact-social h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+  color: #1e2f59;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6a6d75;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #163058;
 }
 
 
+.contact-social .social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-link {
+  font-size: 1.2rem;
+  color: #1e2f59;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #5DADE2; /* your accent color */
+}
 
 @media (max-width: 400px) {
   
@@ -307,36 +390,43 @@ body, .App{
 
 }
 @media (max-width: 768px) {
-  .navbar{
-    background-color:#E7E9EE;
-  }
+  
   .nav-links {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #E7E9EE;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 20px;
-    overflow:hidden;
-    display: none;
-    max-height: 0;
-    opacity:0;
-    transition: max-height 0.4s ease, opacity 0.3s ease;
-  }
-
-  .nav-links.active {
     display:flex;
-    max-height: 300px;
-    opacity:1;
-    
+    position: absolute;
+    align-items: center;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: rgba(255,255,255, 0.9); /* translucent */
+    transition: max-height 1.5s ease, opacity 1.5s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+  .nav-links.active {
+    max-height: 500px; /* enough to show all links */
+    opacity: 1;
+  }
+  .nav-links a {
+    padding: 1rem;
+    margin-bottom: 10px;
   }
 
   .hamburger {
-    display: block;
+    display: flex;
     
+  }
+  
+   .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 }
 @media (max-width: 900px) {
@@ -355,5 +445,21 @@ body, .App{
   .about-slideshow {
     max-width: 100%;
     margin: 0 auto;
+  }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-form,
+  .contact-social {
+    width: 100%;
+  }
+
+  .social-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
   }
 }

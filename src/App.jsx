@@ -147,9 +147,55 @@ useEffect(() => {
 </div>
 
       </section>
-      <section id="contact" className='contact section'>
-        <h2>Contact Me</h2>
-        <p>This section has my contact info</p>
+      <section id="contact" className='contact'>
+        <div className="contact-container">
+          <div className='contact-form'>
+            <h2>Contact Me</h2>
+            <form 
+                action="mailto:areyesca88@outlook.com"
+                method="POST"
+                encType="text/plain">
+                
+              <input type='text' name="name" placeholder="Your Name" required />
+              <input type='email' name="email" placeholder="Your Email" required />
+              <textarea name="message" placeholder="Your Message" required />
+              <button type="submit">Send</button>
+                </form>
+          </div>
+
+          <div className='contact-social'>
+            <h2>My Socials</h2>
+            <div className="social-links">
+              <a
+          href="https://www.linkedin.com/in/a-reyesca/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+        >
+          LinkedIn
+        </a>
+         <a
+          href="https://github.com/areyesca13"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://instagram.com/angellreyess_"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link"
+        >
+          Instagram
+        </a>
+            </div>
+
+          </div>
+        </div>
+       
+        
       
       </section>
     </div>
