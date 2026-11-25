@@ -1,12 +1,15 @@
 import { useState } from "react";
 import "../App.css";
+import logo from "../assets/ar-logo-black.svg";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      <div className="logo">MyLogo</div>
+      <a href="#home" className="logo" onClick={() => setMenuOpen(false)}>
+        <img src={logo} alt="Angel Reyes home" />
+      </a>
 
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>
         <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>

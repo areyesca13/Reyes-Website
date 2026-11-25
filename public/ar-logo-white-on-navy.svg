@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-27 -20 240 240" width="240" height="240" role="img" aria-label="AR logo">
+  <defs><clipPath id="ar-clip"><rect x="-20" y="35" width="240" height="130"/></clipPath></defs>
+  <rect x="-27" y="-20" width="240" height="240" rx="48" ry="48" fill="#1e2f59"/>
+  <path clip-path="url(#ar-clip)" d="M4.0 180 L123.4 20 M110 44 H140 A33 33 0 0 1 140 110 H56.2 M110 20 V180 M126 110 L170 180" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"/>
+</svg>

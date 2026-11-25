@@ -107,46 +107,46 @@ useEffect(() => {
         <div className="projects-grid">
   <div className="project-card">
     <h3>NFL Analytics Dashboard</h3>
-    <p>Built using React, CSS, and JavaScript. Features smooth scrolling, responsive design, and dynamic sections.</p>
-    <p><strong>Tech:</strong> React, CSS, HTML</p>
-    <a href="https://github.com/yourusername/portfolio" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    <p>Currently developing a cloud-hosted database and Streamlit dashboard analyzing 5 seasons of NFL data. 
+      It measures analytics such as quaterback impact and team efficiency.</p>
+    <p><strong>Tech:</strong> Python, PostgreSQL, pandas, Streamlit</p>
+    <a href="https://github.com/areyesca13/portfolio" target="_blank" rel="noopener noreferrer">View on GitHub</a>
   </div>
 
   <div className="project-card">
     <h3>Cat Activity Monitor</h3>
-    <p>An IoT project that tracks when my cat uses the litter box and sends notifications to my phone via SMS.</p>
-    <p><strong>Tech:</strong> Arduino, Python, Twilio API</p>
-    <a href="https://github.com/yourusername/cat-monitor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    <p>An ESP32 prototype that uses a distance sensor to detect when a cat enters and leaves a hooded litter box. 
+      It filters out brief interruptions to count completed visits and tracks daily usage, with a simulation for testing the logic before connecting the hardware.</p>
+    <p><strong>Tech:</strong> C++, ESP32, VL53L0X sensor, PlatformIO</p>
+    <a href="https://github.com/areyesca13/MAKI" target="_blank" rel="noopener noreferrer">View on GitHub</a>
   </div>
 
   <div className="project-card">
     <h3>SAMA</h3>
-    <p>Capstone project</p>
-    <p><strong>Tech:</strong> Arduino, Python, Twilio API</p>
-    <a href="https://github.com/yourusername/cat-monitor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    <p>A cross-platform app for designing and optimizing hybrid energy systems, now used by researchers and developers at Western's FAST Research Group. 
+      Our team built the frontend features and UI then connected them to the Python backend.</p>
+    <p><strong>Tech:</strong> React, Electron, Material UI, Python, REST APIs, Git</p>
+    <a href="https://github.com/areyesca13/swecapstone2024" target="_blank" rel="noopener noreferrer">View on GitHub</a>
   </div>
 
  
   <div className="project-card">
     <h3>Agricultre and Global warming ML model</h3>
-    <p>An IoT project that tracks when my cat uses the litter box and sends notifications to my phone via SMS.</p>
-    <p><strong>Tech:</strong> Arduino, Python, Twilio API</p>
-    <a href="https://github.com/yourusername/cat-monitor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    <p>Group project: machine learning analysis of 10,000 climate and agriculture records that predicts crop yield from temperature, precipitation, CO₂ emissions and extreme weather (R² = 0.83). 
+      It also compares how different crops and adaptation strategies hold up under extreme weather conditions.</p>
+    <p><strong>Tech:</strong> Python, pandas, scikit-learn, Matplotlib, Seaborn, Google Colab</p>
+    <a href="https://github.com/areyesca13/ML_ProjectG15" target="_blank" rel="noopener noreferrer">View on GitHub</a>
   </div>
 
   <div className="project-card">
     <h3>Download Security Scanner</h3>
-    <p>An IoT project that tracks when my cat uses the litter box and sends notifications to my phone via SMS.</p>
-    <p><strong>Tech:</strong> Arduino, Python, Twilio API</p>
-    <a href="https://github.com/yourusername/cat-monitor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    <p>A Python tool that scans downloaded files for warning signs like known-bad hashes, disguised extensions and mismatched 
+      file contents. It gives each file a risk score so the most dangerous ones are reviewed first.</p>
+    <p><strong>Tech:</strong> Python, SHA-256, pytest</p>
+    <a href="https://github.com/areyesca13/Reyes" target="_blank" rel="noopener noreferrer">View on GitHub</a>
   </div>
 
-  <div className="project-card">
-    <h3>PLACEHOLDER</h3>
-    <p>An IoT project that tracks when my cat uses the litter box and sends notifications to my phone via SMS.</p>
-    <p><strong>Tech:</strong> Arduino, Python, Twilio API</p>
-    <a href="https://github.com/yourusername/cat-monitor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-  </div>
+  
 
 </div>
 
