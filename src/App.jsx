@@ -10,7 +10,7 @@ import hiking from './assets/hiking.jpg';
 export default function App() {
   const images = [sky, maki, bella, hiking];
 
-const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
 useEffect(() => {
   const interval = setInterval(() => {
