@@ -7,8 +7,11 @@ import sky from './assets/sky.jpg';
 import maki from './assets/maki.jpg';
 import bella from './assets/bella.jpg';
 import hiking from './assets/hiking.jpg';
+import tobermory from './assets/me-tobermory.jpg';
+import fall from './assets/me-fall.jpg';
+import jacob from './assets/jacob-me.jpg';
 export default function App() {
-  const images = [sky, maki, bella, hiking];
+  const images = [fall, maki, bella, hiking, tobermory,sky, jacob];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -27,8 +30,9 @@ useEffect(() => {
       <section id="home" className='home section'>
         <div className="home-content">
           <img src={selfie} alt="Angel" className='home-image'/>
-        <h1>Hello World! I'm Angel and welcome to my website</h1>
-        <h2>I'm a software engineering new grad who loves building creative and practical projects.</h2>
+        <h1>Hello World! </h1>
+        <h1>I'm Angel and welcome to my website</h1>
+        <h2>I'm a software engineering grad who loves building creative and practical projects.</h2>
         </div>
         
       </section>
@@ -52,8 +56,8 @@ useEffect(() => {
     <div className="about-text">
       <div className="about-personal">
         <h1>Who Am I?</h1>
-        <h2>I love any outdoor activity such has hiking, camping, and fishing. I adore spending time with my
-          friends, and my cat Maki! To wind down I like watching and analyzing sports like football and hockey.</h2></div>
+        <h2>I love any physical and outdoor activity such has rock climbing, hiking, camping, and fishing. I adore spending time with my
+          friends, my lovely boyfriend, and my cat Maki! To wind down I like photographing nature, reading classical lit, or watching and analyzing sports like football and hockey.</h2></div>
       <div className="about-programming">
         <h1>Programming Interests</h1>
         <h2>My main interests are in cyber security and embedded systems programming, where I enjoy tackling real-world technical challenges.</h2>
@@ -102,7 +106,7 @@ useEffect(() => {
         
         <div className="projects-grid">
   <div className="project-card">
-    <h3>Sports Analytics</h3>
+    <h3>NFL Analytics Dashboard</h3>
     <p>Built using React, CSS, and JavaScript. Features smooth scrolling, responsive design, and dynamic sections.</p>
     <p><strong>Tech:</strong> React, CSS, HTML</p>
     <a href="https://github.com/yourusername/portfolio" target="_blank" rel="noopener noreferrer">View on GitHub</a>
@@ -117,7 +121,7 @@ useEffect(() => {
 
   <div className="project-card">
     <h3>SAMA</h3>
-    <p>An IoT project that tracks when my cat uses the litter box and sends notifications to my phone via SMS.</p>
+    <p>Capstone project</p>
     <p><strong>Tech:</strong> Arduino, Python, Twilio API</p>
     <a href="https://github.com/yourusername/cat-monitor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
   </div>
@@ -131,7 +135,7 @@ useEffect(() => {
   </div>
 
   <div className="project-card">
-    <h3>PLACEHOLDER</h3>
+    <h3>Download Security Scanner</h3>
     <p>An IoT project that tracks when my cat uses the litter box and sends notifications to my phone via SMS.</p>
     <p><strong>Tech:</strong> Arduino, Python, Twilio API</p>
     <a href="https://github.com/yourusername/cat-monitor" target="_blank" rel="noopener noreferrer">View on GitHub</a>
